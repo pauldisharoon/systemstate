@@ -1,0 +1,44 @@
+{% load static %}
+
+<html>
+  <head>
+    <title>System Check with Django</title>
+    <style>
+      table { width:700px;padding:6px; }
+      thead { font-size: 18px; text-align:left; }
+      th:first-child { width:120px; }
+      td:first-child { font-weight: bold; padding: 6px 0; }
+    </style>
+  </head>
+  <body>
+    <h1>System Check with Django</h1>
+    <p id="error_info"></p>
+    <table>
+      <thead>
+          <th>
+            Stats Name
+          </th>
+          <th>
+            Stats Value
+          </th>
+      </thead>
+      <tbody id="info_body">
+        <tr >
+          <td>CPU  Load Avg</td>
+          <td id="cpu_info"></td>
+        </tr>
+        <tr >
+          <td>Memory</td>
+          <td id="memory_info"></td>
+        </tr>
+        <tr >
+          <td>Disk</td>
+          <td id="disk_info"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <script src="{% static 'check/js/check.js' %}"></script>
+
+  </body>
+</html>
